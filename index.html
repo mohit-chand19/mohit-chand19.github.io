@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohit — Odoo, ERP &amp; business analysis</title>
+<meta name="description" content="Mohit — Odoo techno-functional consultant and ERP business analyst in Kathmandu, Nepal.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#0f172a;--mute:#5b6478;--line:#e3e8f2;--a:#6d5efc;--b:#14b8a6;--soft:#eeecff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0e17;--card:#131827;--ink:#eef1f8;--mute:#9aa4bd;--line:#232b42;--a:#8b7dff;--b:#2dd4bf;--soft:#1c2040}}
+:root[data-theme="dark"]{--bg:#0b0e17;--card:#131827;--ink:#eef1f8;--mute:#9aa4bd;--line:#232b42;--a:#8b7dff;--b:#2dd4bf;--soft:#1c2040}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:20}
+h1,h2,h3{font-family:"Space Grotesk",Inter,system-ui,sans-serif;margin:0;line-height:1.15}
+a{color:var(--a)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font:700 20px "Space Grotesk",sans-serif;color:var(--ink);text-decoration:none}
+.logo i{font-style:normal;color:var(--a)}
+nav{display:flex;gap:18px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--mute);text-decoration:none;font-size:14px;font-weight:500}
+nav a:hover{color:var(--a)}
+main{max-width:1080px;margin:0 auto;padding:0 20px 56px}
+.hero{padding:72px 0 40px;display:grid;grid-template-columns:1.5fr 1fr;gap:32px;align-items:center}
+.pill{display:inline-block;padding:4px 12px;border-radius:99px;background:var(--soft);color:var(--a);font-size:13px;font-weight:600}
+.hero h1{font-size:clamp(36px,6vw,62px);margin:16px 0}
+.grad{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mute);max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{padding:11px 20px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;background:linear-gradient(90deg,var(--a),var(--b));color:#fff}
+.btn.o{background:none;border:1px solid var(--line);color:var(--ink)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.panel dl{margin:0;display:grid;gap:14px}
+.panel dt{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.panel dd{margin:0;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:12px 0 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center}
+.stat b{display:block;font:700 28px "Space Grotesk",sans-serif;color:var(--a)}
+.stat span{font-size:13px;color:var(--mute)}
+section{margin-top:72px}
+.eyebrow{font-size:13px;font-weight:600;color:var(--b);text-transform:uppercase;letter-spacing:.1em}
+section>h2{font-size:clamp(26px,4vw,36px);margin:6px 0 24px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.about p{margin:0 0 12px;color:var(--mute)}
+.quote{background:linear-gradient(135deg,var(--a),var(--b));color:#fff;border-radius:20px;padding:28px;font:500 24px/1.35 "Space Grotesk",sans-serif;display:flex;align-items:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--a)}
+.card small{color:var(--a);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.card h3{font-size:19px;margin:6px 0}
+.card p{margin:0;color:var(--mute);font-size:15px}
+.flow{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin-bottom:12px}
+.flow h3{font-size:17px;margin-bottom:10px}
+.steps{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.steps span{background:var(--soft);padding:3px 12px;border-radius:99px;font-size:14px}
+.steps em{font-style:normal;color:var(--mute)}
+.apps{margin:10px 0 0;font-size:13px;color:var(--mute)}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.tl div{position:relative;padding-bottom:26px}
+.tl div::before{content:"";position:absolute;left:-31px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--a);box-shadow:0 0 0 4px var(--soft)}
+.tl small{color:var(--b);font-weight:600}
+.tl h3{font-size:19px;margin:2px 0}
+.tl p{margin:0;color:var(--mute);font-size:15px}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.rule{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.rule b{display:block;font:700 30px "Space Grotesk",sans-serif;color:var(--b)}
+.rule h3{font-size:16px;margin:4px 0}
+.rule p{margin:0;font-size:14px;color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tags span{background:var(--soft);color:var(--ink);padding:4px 12px;border-radius:99px;font-size:14px}
+.contact{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:48px 20px}
+.contact h2{font-size:clamp(24px,4vw,34px);max-width:640px;margin:8px auto 20px}
+footer{text-align:center;color:var(--mute);font-size:13px;margin-top:28px}
+@media(max-width:760px){.hero,.about{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.hero{padding-top:40px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="#top">mohit<i>.</i></a>
+<nav><a href="#work">Projects</a><a href="#builds">Side projects</a><a href="#flows">Flows</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#rules">Principles</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+<main id="top">
+<div class="hero">
+<div>
+<span class="pill">Kathmandu · Nepal</span>
+<h1>I make Odoo fit how your company <span class="grad">actually runs.</span></h1>
+<p>Odoo techno-functional consultant and ERP business analyst. I work on both sides of an implementation: understanding the business process, and writing the code that supports it.</p>
+<div class="cta"><a class="btn" href="#contact">Get in touch</a><a class="btn o" href="#work">See projects</a></div>
+</div>
+<aside class="panel"><dl>
+<div><dt>Currently</dt><dd>Client-side Odoo coordination at MAW</dd></div>
+<div><dt>Studying</dt><dd>MSc Computer Science, NCIT (Pokhara University)</dd></div>
+<div><dt>Based in</dt><dd>Lalitpur, Kathmandu</dd></div>
+</dl></aside>
+</div>
+<div class="stats">
+<div class="stat"><b>19</b><span>Odoo Enterprise version</span></div>
+<div class="stat"><b>2</b><span>sides of the table</span></div>
+<div class="stat"><b>BSc</b><span>CSIT, Tribhuvan Univ.</span></div>
+<div class="stat"><b>MSc</b><span>in progress</span></div>
+</div>
+
+<section id="about">
+<div class="about">
+<div>
+<div class="eyebrow">About</div>
+<h2>Namaste. I’m Mohit.</h2>
+<p>I’ve worked on the vendor side, delivering Odoo 19 Enterprise implementations for several clients, and I now sit on the client side, coordinating an implementation vendor.</p>
+<p>That means I know what a good requirement looks like, and what a good delivery looks like.</p>
+</div>
+<div class="quote">“A good ERP starts with a good conversation.”</div>
+</div>
+</section>
+
+<section id="work">
+<div class="eyebrow">Projects</div><h2>Problems I’ve worked on</h2>
+<div class="grid">
+<div class="card"><small>Tea · Nepal</small><h3>Tea collective on Odoo 19</h3><p>Scoped workstreams and mapped domain processes for an Odoo 19 implementation in the tea sector.</p></div>
+<div class="card"><small>Advertising · Nepal</small><h3>Hoarding rental management</h3><p>Gap analysis and a custom module to manage outdoor hoarding agreements in Odoo 19.</p></div>
+<div class="card"><small>Distribution · Nepal</small><h3>CRM for distribution</h3><p>Requirements gathering and minutes of meeting for a distribution company’s Odoo CRM rollout.</p></div>
+<div class="card"><small>Manufacturing · Nepal</small><h3>Process documentation &amp; MO report</h3><p>Documented business processes and built a custom manufacturing order report.</p></div>
+<div class="card"><small>Media &amp; printing · Nepal</small><h3>Multi-company printing business</h3><p>Odoo setup for a media printing business running several companies.</p></div>
+<div class="card"><small>Migration analysis</small><h3>Odoo 19 migration review</h3><p>Analysed what a move to Odoo 19 would involve for an existing system.</p></div>
+</div>
+</section>
+
+<section id="builds">
+<div class="eyebrow">Side projects · GitHub</div><h2>Things I’ve built on my own</h2>
+<div class="grid">
+<a class="card" href="https://github.com/mohit-chand19/Dajngo-CRM" style="text-decoration:none;color:inherit"><small>Django · Python</small><h3>Django CRM</h3><p>A customer relationship management web app: register, log in, and add, view, update and manage customer records.</p></a>
+<a class="card" href="https://github.com/mohit-chand19/django-chat-app" style="text-decoration:none;color:inherit"><small>Django · Ajax</small><h3>Real-time chat app</h3><p>A real-time chat application built with Django and Ajax.</p></a>
+<a class="card" href="https://github.com/mohit-chand19/Django_QR_Generator" style="text-decoration:none;color:inherit"><small>Django · Python</small><h3>QR code generator</h3><p>Generates a QR code image from a URL and lets you download it.</p></a>
+<a class="card" href="https://github.com/mohit-chand19/dajngo_ecommerce" style="text-decoration:none;color:inherit"><small>Django · CSS</small><h3>E-commerce site</h3><p>A Django-based e-commerce project.</p></a>
+<a class="card" href="https://github.com/mohit-chand19/ShramSathi-job-portal" style="text-decoration:none;color:inherit"><small>JavaScript</small><h3>ShramSathi job portal</h3><p>A job portal with separate backend and frontend codebases.</p></a>
+</div>
+<p style="margin-top:16px"><a href="https://github.com/mohit-chand19">See all repositories on GitHub →</a></p>
+</section>
+
+<section id="flows">
+<div class="eyebrow">Business &amp; ERP</div><h2>Business flows, not modules</h2>
+<div class="flow"><h3>Order to cash</h3><div class="steps"><span>Quote</span><em>→</em><span>Sales order</span><em>→</em><span>Delivery</span><em>→</em><span>Invoice</span><em>→</em><span>Payment</span></div><p class="apps">CRM, Sales, Inventory, Accounting</p></div>
+<div class="flow"><h3>Procure to pay</h3><div class="steps"><span>Request</span><em>→</em><span>Purchase order</span><em>→</em><span>Receipt</span><em>→</em><span>Vendor bill</span><em>→</em><span>Payment</span></div><p class="apps">Purchase, Inventory, Accounting</p></div>
+<div class="flow"><h3>Plan to produce</h3><div class="steps"><span>Bill of materials</span><em>→</em><span>Manufacturing order</span><em>→</em><span>Stock</span><em>→</em><span>Costing</span></div><p class="apps">Manufacturing, Inventory</p></div>
+<div class="flow"><h3>Record to report</h3><div class="steps"><span>Journals</span><em>→</em><span>Reconciliation</span><em>→</em><span>Month-end close</span><em>→</em><span>Reports</span></div><p class="apps">Accounting</p></div>
+</section>
+
+<section id="services">
+<div class="eyebrow">Services</div><h2>What you can hire me for</h2>
+<div class="grid">
+<div class="card"><h3>Requirements &amp; gap analysis</h3><p>Turning how your business works into clear, testable Odoo requirements.</p></div>
+<div class="card"><h3>Implementation</h3><p>Standard Odoo first, configured around your processes through to go-live.</p></div>
+<div class="card"><h3>Custom modules</h3><p>Python and Odoo development, only where standard features fall short.</p></div>
+<div class="card"><h3>Vendor coordination</h3><p>Representing the client: reviewing scope, tracking delivery, accepting work.</p></div>
+</div>
+</section>
+
+<section id="experience">
+<div class="eyebrow">Experience</div><h2>Where I’ve worked</h2>
+<div class="tl">
+<div><small>Now · Kathmandu</small><h3>MAW — Client-side Odoo</h3><p>Coordinating an Odoo implementation vendor on the client side.</p></div>
+<div><small>Since early 2025</small><h3>Innovax Solutions Pvt. Ltd. — Techno-Functional Consultant &amp; ERP Business Analyst</h3><p>Odoo 19 Enterprise implementations for multiple clients, covering analysis, configuration and customization.</p></div>
+<div><small>Earlier</small><h3>Innovax Solutions — Python Developer</h3><p>Python development before moving into the consultant role.</p></div>
+<div><small>Education</small><h3>MSc Computer Science, NCIT · BSc CSIT, Tribhuvan University</h3><p>MSc at Pokhara University (2026–present); BSc completed.</p></div>
+</div>
+</section>
+
+<section id="rules">
+<div class="eyebrow">Principles</div><h2>Rules I don’t skip</h2>
+<div class="rules">
+<div class="rule"><b>01</b><h3>Listen before configuring</h3><p>Map how the business really runs first.</p></div>
+<div class="rule"><b>02</b><h3>Standard Odoo first</h3><p>Standard survives upgrades.</p></div>
+<div class="rule"><b>03</b><h3>Customize what earns it</h3><p>Only where it pays off.</p></div>
+<div class="rule"><b>04</b><h3>Testable requirements</h3><p>Write what people can verify.</p></div>
+<div class="rule"><b>05</b><h3>Stay after go-live</h3><p>The first month decides whether an ERP sticks.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="eyebrow">Skills</div><h2>The technical side</h2>
+<div class="grid">
+<div class="card"><h3>Odoo</h3><div class="tags"><span>Odoo 19 Enterprise</span><span>Custom modules</span><span>Reports</span><span>Workflows</span></div></div>
+<div class="card"><h3>Business analysis</h3><div class="tags"><span>Requirements</span><span>Gap analysis</span><span>Process mapping</span><span>MoM &amp; documentation</span></div></div>
+<div class="card"><h3>Platform</h3><div class="tags"><span>Python</span><span>PostgreSQL</span><span>Git</span></div></div>
+<div class="card"><h3>Web development</h3><div class="tags"><span>Django</span><span>JavaScript</span><span>Ajax</span><span>HTML &amp; CSS</span></div></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="eyebrow">Contact</div>
+<h2>Planning an Odoo rollout or need a sharper requirement? Write to me.</h2>
+<a class="btn" href="mailto:you@example.com">Email me</a> <a class="btn o" href="https://www.linkedin.com/in/mohit-py">LinkedIn</a> <a class="btn o" href="https://github.com/mohit-chand19">GitHub</a>
+<p style="color:var(--mute);font-size:14px;margin:18px 0 0">Kathmandu is UTC+5:45 — yes, the 45 minutes are real.</p>
+</section>
+<footer>© 2026 Mohit · Kathmandu, Nepal</footer>
+</main>
+</body>
+</html>
